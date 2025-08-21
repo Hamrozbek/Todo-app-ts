@@ -32,10 +32,10 @@ function renderTodo(arr: TodoType[], list: Element | null) {
     let elItem = document.createElement("li")
     elItem.innerHTML = `
       <div class="flex items-center justify-between border-b p-1 text-white">
-        <span class="text-white">${item.value}</span>
+        <span class="text-white text-[13px] md:text-[18px]">${item.value}</span>
         <div class="flex gap-2 items-center">
-          <button class="edit-btn bg-yellow-600 duration-300 hover:scale-[1.1] cursor-pointer text-white py-1 px-2 rounded-md">Edit</button>
-          <button class="delete-btn bg-red-600 duration-300 hover:scale-[1.1] cursor-pointer text-white py-1 px-2 rounded-md">Delet</button>
+          <button class="edit-btn bg-yellow-600 duration-300 hover:scale-[1.1] cursor-pointer text-white text-[13px] md:text-[18px] py-[2px] px-[6px] md:py-[4px] md:px-[8px] rounded-md">Edit</button>
+          <button class="delete-btn bg-red-600 duration-300 hover:scale-[1.1] cursor-pointer text-white text-[13px] md:text-[18px] py-[2px] px-[6px] md:py-[4px] md:px-[8px] rounded-md">Delet</button>
         </div>
       </div>
     `
