@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <style type="text/tailwindcss"></style>
+</head>
+
+<body class="m-0 p-0">
+    <video autoplay muted loop class="fixed top-0 left-0 w-full h-full object-cover -z-10">
+        <source src="./vedio.mp4" type="video/mp4" />
+    </video>
+
+    <div class="relative z-10">
+        <h1 class="text-[35px] text-[#333333] font-bold text-center mt-[50px]">Todo App</h1>
+
+        <form autocomplete="off" class="todo-form w-[500px] p-2 bg-[#333333] rounded-md mx-auto mt-[30px] gap-2 flex">
+            <input required class="w-full p-2 rounded-md outline-none bg-white" name="todo" type="text"
+                placeholder="Enter todo...">
+            <button class="w-[100px] bg-blue-700 hover:scale-[1.1] duration-300 rounded-md text-white cursor-pointer"
+                type="submit">Add</button>
+        </form>
+
+        <ul class="todo-list w-[500px] p-2 bg-[#333333] rounded-md mx-auto mt-[20px]"></ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
