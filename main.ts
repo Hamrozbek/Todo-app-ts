@@ -31,7 +31,7 @@ function renderTodo(arr: TodoType[], list: Element | null) {
   arr.forEach((item: TodoType) => {
     let elItem = document.createElement("li")
     elItem.innerHTML = `
-      <div class="flex items-center justify-between border-b p-1 text-white">
+      <div class="flex items-center justify-between border-b p-[2px] md:p-1 text-white">
         <span class="text-white text-[13px] md:text-[18px]">${item.value}</span>
         <div class="flex gap-2 items-center">
           <button class="edit-btn bg-yellow-600 duration-300 hover:scale-[1.1] cursor-pointer text-white text-[13px] md:text-[18px] py-[2px] px-[6px] md:py-[4px] md:px-[8px] rounded-md">Edit</button>
