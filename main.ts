@@ -5,7 +5,7 @@ interface TodoType {
   id: number,
   value: string
 }
-let todos: TodoType[] = JSON.parse(localStorage.getItem("todos") || "[]")
+let todos = JSON.parse(localStorage.getItem("todos") || "[]") || []
 
 renderTodo(todos, elTodoList)
 
@@ -19,9 +19,9 @@ elForm?.addEventListener("submit", function (e) {
   todos.push(data)
 
   localStorage.setItem("todos", JSON.stringify(todos))
-  renderTodo(todos, elTodoList)
+  renderTodo(todos, elTodoList);
 
-  elForm.reset()
+  (elForm as HTMLFormElement).reset()
 })
 
 
@@ -52,7 +52,7 @@ function renderTodo(arr: TodoType[], list: Element | null) {
 
     // delete part
     elItem.querySelector(".delete-btn")?.addEventListener("click", () => {
-      todos = todos.filter(e => e.id !== item.id)
+      todos = todos.filter((e:TodoType) => e.id !== item.id)
       localStorage.setItem("todos", JSON.stringify(todos))
       renderTodo(todos, list)
     })

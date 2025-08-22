@@ -1,6 +1,6 @@
 let elForm = document.querySelector(".todo-form");
 let elTodoList = document.querySelector(".todo-list");
-let todos = JSON.parse(localStorage.getItem("todos") || "[]");
+let todos = JSON.parse(localStorage.getItem("todos") || "[]") || [];
 renderTodo(todos, elTodoList);
 elForm === null || elForm === void 0 ? void 0 : elForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -39,7 +39,7 @@ function renderTodo(arr, list) {
         });
         // delete part
         (_b = elItem.querySelector(".delete-btn")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
-            todos = todos.filter(e => e.id !== item.id);
+            todos = todos.filter((e) => e.id !== item.id);
             localStorage.setItem("todos", JSON.stringify(todos));
             renderTodo(todos, list);
         });
